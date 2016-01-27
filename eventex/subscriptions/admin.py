@@ -13,11 +13,11 @@ class SubscriptionModelAdmin(admin.ModelAdmin):
 
     actions = ['mark_as_paid']
 
-    #def subscribed_today(self, obj):
-    #    return obj.created_at == now().date()
-
     def subscribed_today(self, obj):
-        return obj.created_at == timezone().date()
+        return obj.created_at == now().date()
+
+    #def subscribed_today(self, obj):
+    #    return obj.created_at == timezone().date()
 
 
     subscribed_today.short_description = 'inscrito hoje?'
