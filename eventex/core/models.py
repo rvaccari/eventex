@@ -21,7 +21,7 @@ class Speaker(models.Model):
 
 class Contact(models.Model):
     EMAIL = 'E'
-    PHONE = 'PHONE'
+    PHONE = 'P'
     KINDS =(
         (EMAIL, 'Email'),
         (PHONE, 'Telefone'),
