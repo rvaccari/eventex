@@ -74,3 +74,6 @@ class Course(Talk):
 class Cancelado(models.Model):
     created_at = models.DateTimeField('criado em', auto_now_add=True)
     resposta = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.resposta
