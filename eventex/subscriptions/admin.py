@@ -2,6 +2,8 @@ from datetime import timezone
 
 from django.contrib import admin
 from django.utils.timezone import now
+
+from eventex.core.models import Cancelado
 from eventex.subscriptions.models import Subscription
 
 class SubscriptionModelAdmin(admin.ModelAdmin):
@@ -35,5 +37,7 @@ class SubscriptionModelAdmin(admin.ModelAdmin):
 
     mark_as_paid.short_description = 'Marcar como pago'
 
+
+admin.site.register(Cancelado)
 admin.site.register(Subscription, SubscriptionModelAdmin)
 
